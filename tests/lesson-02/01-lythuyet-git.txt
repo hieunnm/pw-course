@@ -1,0 +1,7 @@
+git init: khởi tạo một repo git mới trong thư mục hiện tại (tạo thư mục ẩn .git), từ đây git bắt đầu theo dõi các thay đổi trong thư mục.
+
+git add <file_name>: đưa một file cụ thể từ working directory vào staging area, chuẩn bị cho lần commit tiếp theo.
+
+git add .: đưa tất cả file mới/đã thay đổi trong thư mục hiện tại (và các thư mục con) vào staging area, thay vì phải add từng file một.
+
+git commit -m "message": lưu lại các thay đổi đang nằm ở staging area thành một phiên bản trong repository, kèm theo message mô tả nội dung thay đổi đó.
