@@ -1,26 +1,26 @@
 Phân tích từng bước:
 
-a. Tạo file1, file2, file3
+a. Tạo file1, file2, file3 // -> vùng working directory
 -> Chưa git init nên cả 3 file đang ở vùng local.
 
-b. git init
+b. git init //-> tạo repo mới, vẫn đang working directory
 -> Git bắt đầu quản lý thư mục. file1, file2, file3 chuyển sang working directory.
 
-c. git commit -m"init project"
+c. git commit -m"init project" //-> chưa có git add <tên-file> nên lỗi, vẫn đang ở vùng working directory
 -> Chưa có git add nào trước đó nên staging area đang trống.
 -> Lệnh thất bại, không commit được gì. 3 file vẫn ở working directory.
 
-d. git add file1
+d. git add file1 // -> chuyển sang vùng staging area
 -> file1 chuyển sang staging area. file2, file3 vẫn ở working directory.
 
-e. git commit -m"add file1"
+e. git commit -m"add file1" //-> chuyển sang vùng repository
 -> Staging area có file1 nên commit thành công. file1 chuyển sang repository.
 
-f. git commit -m"add file"
+f. git commit -m"add file" //-> không commit được gì, này đang ở working directory
 -> Staging area lại đang trống (chưa add gì mới sau bước e).
 -> Lệnh lại thất bại, không commit được gì.
 
-Kết luận vị trí cuối cùng:
+Kết luận vị trí cuối cùng: 
 - file1: repository
 - file2: working directory
 - file3: working directory
