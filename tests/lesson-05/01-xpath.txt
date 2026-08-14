@@ -1,0 +1,31 @@
+Cho DOM sau: https://gist.github.com/minhphong306/6f00adc60f45c898e26d55bcb6cc0ae9 
+Tạo file 01-xpath.txt, đưa ra câu trả lời cho các câu hỏi sau
+
+Sử dụng xpath tuyệt đối, chọn phần tử sau:
+1. Lấy input “Họ và tên”
+/html/body/div/div[1]/form/input[1]
+
+2. Lấy button “Đăng ký”
+/html/body/div/div[1]/form/button
+
+3. Lấy hàng đầu tiên trong tbody
+//div/table/tbody/tr
+nếu lấy đầy đủ
+/html/body/div/div[2]/table/tbody/tr[1]
+
+==============================================
+Sử dụng xpath tương đối, chọn phần tử sau:
+1. Lấy input có placeholder=”Số điện thoại”
+//input[@placeholder='Số điện thoại']
+
+2. Lấy email của “Trần Thị Bình” (hàng 2, cột 2)
+//table[@id='resultTables']//tbody/tr[2]/td[2]
+
+3. Lấy số điện thoại của “Lê Hoàng Cường” (hàng 3, cột 3)
+//table[@id='resultTables']//tbody/tr[3]/td[3]
+
+4. Lấy button có class=”btn-register”
+//button[@class='btn-register']
+
+5. Lấy table có id=”resultTable”
+//table[@id='resultTables']
