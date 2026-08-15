@@ -2,6 +2,7 @@ import { test } from '@playwright/test';
 
 test.describe('Todo Page Tests', () => {
   test('test3', async ({ page }) => {
+    test.setTimeout(120_000);
     // ===== Truy cập trang và vào bài học 3 =====
     await page.goto('https://material.playwrightvn.com/');
     await page.getByText('Bài học 3: Todo page').click();

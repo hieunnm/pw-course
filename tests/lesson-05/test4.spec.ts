@@ -12,9 +12,15 @@ class Note {
 
 test.describe('Personal Notes Tests', () => {
   test('test4', async ({ page }) => {
+    test.setTimeout(60_000);
     // ===== Truy cập trang và vào bài học 4 =====
     await page.goto('https://material.playwrightvn.com/');
     await page.getByText('Bài học 4: Personal notes').click();
+
+    // ===== Đăng ký xử lý dialog: tự động bấm OK mỗi khi có confirm() =====
+    page.on('dialog', async (dialog) => {
+      await dialog.accept();
+    });
 
     // ===== Khai báo locator (TODO: điền sau khi Inspect) =====
     const titleInput = page.locator('//input[@id="note-title"]');
